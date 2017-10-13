@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MorseCoder</string>
+    <string name="StartText">Please enter the text you want to translate into Morse Code:</string>
+</resources>
