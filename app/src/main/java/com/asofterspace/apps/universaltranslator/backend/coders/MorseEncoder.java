@@ -1,41 +1,18 @@
-package com.moyaccercchi.morsecoder;
+package com.asofterspace.apps.universaltranslator.backend.coders;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        Button translateButton = (Button) findViewById(R.id.translateButton);
-        translateButton.setOnClickListener( new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                EditText inputMemo = (EditText) findViewById(R.id.inputMemo);
-                String textToTranslate = inputMemo.getText().toString();
-
-                String translatedText = translateToMorseCode(textToTranslate);
-
-                EditText outputMemo = (EditText) findViewById(R.id.outputMemo);
-                outputMemo.setText(translatedText);
-            }
-        });
-    }
+/**
+ * A class that can encode text into Morse code
+ *
+ * @author Moya (a softer space, 2017)
+ */
+public class MorseEncoder {
 
     /**
      * Translates a given text into its Morse code representation
      * @param textToTranslate the text that is to be translated
      * @return a representation of the text in Morse code
      */
-    private String translateToMorseCode(String textToTranslate) {
+    public String translateToMorseCode(String textToTranslate) {
 
         String input = textToTranslate.toUpperCase();
 
@@ -53,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 // (so three before the space, three after, and one for the space itself)
                 case ' ':
                     result.append(" ");
+                    break;
+                case '\n':
+                    result.append("\n");
                     break;
                 case 'A':
                     result.append("•-");
