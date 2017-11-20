@@ -9,36 +9,54 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.asofterspace.apps.universaltranslator.R;
+import com.asofterspace.apps.universaltranslator.backend.OperationController;
 import com.asofterspace.apps.universaltranslator.backend.coders.MorseDecoder;
 import com.asofterspace.apps.universaltranslator.backend.coders.MorseEncoder;
 import com.asofterspace.apps.universaltranslator.backend.coders.RomanNumeralDecoder;
 import com.asofterspace.apps.universaltranslator.backend.coders.RomanNumeralEncoder;
 
 /**
- * This class controls the frontend of the UniversalTranslator
+ * This class controls the frontend of the UniversalTranslator's main activity
  *
  * @author Moya (a softer space, 2017)
  */
-public class FrontendController implements AdapterView.OnItemSelectedListener {
+public class MainFrontendController implements AdapterView.OnItemSelectedListener {
 
     AppCompatActivity parent;
 
-    private static final String[] operations = {"Text to Morse Code", "Morse Code to Text",
-        "Numbers to Roman Numerals", "Roman Numerals to Numbers"};
+    OperationController operationCtrl;
+
+    private String[] operations = new String[]{};
 
     private int selectedOperation = 0;
 
-    public FrontendController(AppCompatActivity parent) {
+    public MainFrontendController(AppCompatActivity parent) {
 
-        this.parent = parent;
+        this.parent = parent; // NO PROB
 
+        operationCtrl = new OperationController(); // NO PROB
+
+        // PROB IS INSIDE THIS SWITCH - so either the getCurrentOperation, or the string array assignment!
+        switch (operationCtrl.getCurrentOperation()) {
+
+            case MORSE_CODE:
+                operations = new String[]{"Text to Morse Code", "Morse Code to Text"};
+                break;
+
+            case ROMAN_NUMERALS:
+                operations = new String[]{"Numbers to Roman Numerals", "Roman Numerals to Numbers"};
+                break;
+        }
+
+        /*
         addOptionsToOperationSelector();
+        */
 
-        addListenerToTranslateButton();
+        addListenerToTranslateButton(); // NO PROB
 
-        addListenerToInputMemo();
+        addListenerToInputMemo(); // NO PROB
 
-        addListenerToExchangeButton();
+        addListenerToExchangeButton(); // NO PROB
     }
 
     private void addOptionsToOperationSelector() {
@@ -107,24 +125,24 @@ public class FrontendController implements AdapterView.OnItemSelectedListener {
 
         String translatedText = "";
 
-        switch (selectedOperation) {
+        switch (operationCtrl.getCurrentOperation()) {
 
-            case 0:
-                translatedText = (new MorseEncoder()).translateToMorseCode(textToTranslate);
+            case MORSE_CODE:
+                if (selectedOperation == 0) {
+                    translatedText = (new MorseEncoder()).translateToMorseCode(textToTranslate);
+                } else {
+                    translatedText = (new MorseDecoder()).translateFromMorseCode(textToTranslate);
+                }
                 break;
 
-            case 1:
-                translatedText = (new MorseDecoder()).translateFromMorseCode(textToTranslate);
-                break;
-
-            case 2:
-                translatedText = (new RomanNumeralEncoder()).encodeNumbersIntoRomanNumerals(
-                        textToTranslate);
-                break;
-
-            case 3:
-                translatedText = (new RomanNumeralDecoder()).decodeRomanNumeralsIntoNumbers(
-                        textToTranslate);
+            case ROMAN_NUMERALS:
+                if (selectedOperation == 0) {
+                    translatedText = (new RomanNumeralEncoder()).encodeNumbersIntoRomanNumerals(
+                            textToTranslate);
+                } else {
+                    translatedText = (new RomanNumeralDecoder()).decodeRomanNumeralsIntoNumbers(
+                            textToTranslate);
+                }
                 break;
         }
 

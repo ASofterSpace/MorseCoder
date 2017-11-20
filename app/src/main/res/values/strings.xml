@@ -3,4 +3,8 @@
     <string name="StartText">Please enter your text</string>
     <string name="TranslateBtn">Translate</string>
     <string name="ExchangeBtn">Switch In and Out</string>
+    <string name="selectTxt">Please select what you wish to translate:</string>
+    <string name="SelectMorseCodeBtn">Morse Code</string>
+    <string name="SelectRomanNumeralsBtn">Roman Numerals</string>
+    <string name="created_by">Created by A Softer Space, 2017</string>
 </resources>
