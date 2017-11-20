@@ -32,11 +32,10 @@ public class MainFrontendController implements AdapterView.OnItemSelectedListene
 
     public MainFrontendController(AppCompatActivity parent) {
 
-        this.parent = parent; // NO PROB
+        this.parent = parent;
 
-        operationCtrl = new OperationController(); // NO PROB
+        operationCtrl = new OperationController();
 
-        // PROB IS INSIDE THIS SWITCH - so either the getCurrentOperation, or the string array assignment!
         switch (operationCtrl.getCurrentOperation()) {
 
             case MORSE_CODE:
@@ -48,15 +47,13 @@ public class MainFrontendController implements AdapterView.OnItemSelectedListene
                 break;
         }
 
-        /*
         addOptionsToOperationSelector();
-        */
 
-        addListenerToTranslateButton(); // NO PROB
+        addListenerToTranslateButton();
 
-        addListenerToInputMemo(); // NO PROB
+        addListenerToInputMemo();
 
-        addListenerToExchangeButton(); // NO PROB
+        addListenerToExchangeButton();
     }
 
     private void addOptionsToOperationSelector() {

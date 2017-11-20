@@ -16,7 +16,6 @@ public class OperationController {
     private static Operation currentOperation;
 
     public OperationController() {
-        currentOperation = null;
     }
 
     public void switchTo(AppCompatActivity from, Operation to) {
