@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "26.0.2"
     defaultConfig {
-        applicationId "com.asofterspace.apps.universaltranslator"
+        applicationId "com.asofterspace.apps.universalconverter"
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1

@@ -1,9 +1,7 @@
-package com.asofterspace.apps.universaltranslator;
+package com.asofterspace.apps.universalconverter;
 
-import com.asofterspace.apps.universaltranslator.backend.coders.Base64Decoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.Base64Encoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.RomanNumeralDecoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.RomanNumeralEncoder;
+import com.asofterspace.apps.universalconverter.backend.coders.Base64Decoder;
+import com.asofterspace.apps.universalconverter.backend.coders.Base64Encoder;
 
 import org.junit.Test;
 

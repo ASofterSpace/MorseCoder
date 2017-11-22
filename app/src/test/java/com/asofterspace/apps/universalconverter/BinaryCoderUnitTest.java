@@ -1,9 +1,7 @@
-package com.asofterspace.apps.universaltranslator;
+package com.asofterspace.apps.universalconverter;
 
-import com.asofterspace.apps.universaltranslator.backend.coders.Base64Decoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.Base64Encoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.BinaryDecoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.BinaryEncoder;
+import com.asofterspace.apps.universalconverter.backend.coders.BinaryDecoder;
+import com.asofterspace.apps.universalconverter.backend.coders.BinaryEncoder;
 
 import org.junit.Test;
 

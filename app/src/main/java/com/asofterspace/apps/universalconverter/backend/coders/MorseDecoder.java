@@ -1,4 +1,4 @@
-package com.asofterspace.apps.universaltranslator.backend.coders;
+package com.asofterspace.apps.universalconverter.backend.coders;
 
 /**
  * A class that can decode text from Morse code

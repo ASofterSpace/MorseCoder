@@ -1,9 +1,9 @@
-package com.asofterspace.apps.universaltranslator;
+package com.asofterspace.apps.universalconverter;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.asofterspace.apps.universaltranslator.frontend.SelectFrontendController;
+import com.asofterspace.apps.universalconverter.frontend.SelectFrontendController;
 
 /**
  * This is the activity of the UniversalTranslator which allows the user to select what actually is

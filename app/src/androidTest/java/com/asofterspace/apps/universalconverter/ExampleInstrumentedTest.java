@@ -1,4 +1,4 @@
-package com.asofterspace.apps.universaltranslator;
+package com.asofterspace.apps.universalconverter;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

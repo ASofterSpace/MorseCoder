@@ -1,4 +1,4 @@
-package com.asofterspace.apps.universaltranslator;
+package com.asofterspace.apps.universalconverter;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

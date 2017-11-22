@@ -1,9 +1,9 @@
-package com.asofterspace.apps.universaltranslator;
+package com.asofterspace.apps.universalconverter;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.asofterspace.apps.universaltranslator.frontend.MainFrontendController;
+import com.asofterspace.apps.universalconverter.frontend.MainFrontendController;
 
 /**
  * This is the main activity of the UniversalTranslator, which concerns itself with - who would have

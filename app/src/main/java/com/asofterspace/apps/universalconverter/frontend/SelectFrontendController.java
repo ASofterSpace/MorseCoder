@@ -1,20 +1,12 @@
-package com.asofterspace.apps.universaltranslator.frontend;
+package com.asofterspace.apps.universalconverter.frontend;
 
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
 
-import com.asofterspace.apps.universaltranslator.R;
-import com.asofterspace.apps.universaltranslator.backend.Operation;
-import com.asofterspace.apps.universaltranslator.backend.OperationController;
-import com.asofterspace.apps.universaltranslator.backend.coders.MorseDecoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.MorseEncoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.RomanNumeralDecoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.RomanNumeralEncoder;
+import com.asofterspace.apps.universalconverter.R;
+import com.asofterspace.apps.universalconverter.backend.Operation;
+import com.asofterspace.apps.universalconverter.backend.OperationController;
 
 /**
  * This class controls the frontend of the UniversalTranslator's select activity

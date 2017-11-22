@@ -1,9 +1,7 @@
-package com.asofterspace.apps.universaltranslator;
+package com.asofterspace.apps.universalconverter;
 
-import com.asofterspace.apps.universaltranslator.backend.coders.MorseDecoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.MorseEncoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.RomanNumeralDecoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.RomanNumeralEncoder;
+import com.asofterspace.apps.universalconverter.backend.coders.RomanNumeralDecoder;
+import com.asofterspace.apps.universalconverter.backend.coders.RomanNumeralEncoder;
 
 import org.junit.Test;
 
@@ -52,7 +50,7 @@ public class RomanNumeralCoderUnitTest {
 
         String numbers = "oh my!";
         String outcome = (new RomanNumeralEncoder()).encodeNumbersIntoRomanNumerals(numbers);
-        assertEquals("", outcome);
+        assertEquals("N/A", outcome);
 
         String numerals = "just some random letters...";
         (new RomanNumeralDecoder()).decodeRomanNumeralsIntoNumbers(numerals);

@@ -1,7 +1,7 @@
-package com.asofterspace.apps.universaltranslator;
+package com.asofterspace.apps.universalconverter;
 
-import com.asofterspace.apps.universaltranslator.backend.coders.MorseDecoder;
-import com.asofterspace.apps.universaltranslator.backend.coders.MorseEncoder;
+import com.asofterspace.apps.universalconverter.backend.coders.MorseDecoder;
+import com.asofterspace.apps.universalconverter.backend.coders.MorseEncoder;
 
 import org.junit.Test;
 

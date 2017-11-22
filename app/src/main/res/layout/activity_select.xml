@@ -5,7 +5,7 @@
     android:id="@+id/selectActivityLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.asofterspace.apps.universaltranslator.SelectActivity">
+    tools:context="com.asofterspace.apps.universalconverter.SelectActivity">
 
     <TextView
         android:id="@+id/selectTxt"

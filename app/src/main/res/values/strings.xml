@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UniversalTranslator</string>
+    <string name="app_name">UniversalConverter</string>
     <string name="StartText">Please enter your text</string>
     <string name="TranslateBtn">Translate</string>
     <string name="ExchangeBtn">Switch In and Out</string>

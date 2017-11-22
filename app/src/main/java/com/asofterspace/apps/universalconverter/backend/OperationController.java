@@ -1,9 +1,9 @@
-package com.asofterspace.apps.universaltranslator.backend;
+package com.asofterspace.apps.universalconverter.backend;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
-import com.asofterspace.apps.universaltranslator.MainActivity;
+import com.asofterspace.apps.universalconverter.MainActivity;
 
 /**
  * This class keeps track of the currently selected operation
