@@ -5,6 +5,9 @@
     <string name="ExchangeBtn">Switch In and Out</string>
     <string name="selectTxt">Please select what you wish to translate:</string>
     <string name="SelectMorseCodeBtn">Morse Code</string>
+    <string name="SelectBinaryBtn">Binary</string>
+    <string name="SelectBase64Btn">Base64</string>
+    <string name="SelectRot13Btn">ROT13 (and Friends)</string>
     <string name="SelectRomanNumeralsBtn">Roman Numerals</string>
-    <string name="created_by">Created by A Softer Space, 2017</string>
+    <string name="created_by">Created by www.asofterspace.com (2017)</string>
 </resources>

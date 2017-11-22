@@ -30,11 +30,62 @@
         android:background="@color/colorPrimary"
         android:text="@string/SelectMorseCodeBtn"
         android:textColor="@color/colorBtnText"
-        app:layout_constraintBottom_toTopOf="@+id/selectRomanNumeralsBtn"
+        app:layout_constraintBottom_toTopOf="@+id/selectBinaryBtn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/selectTxt" />
+
+    <Button
+        android:id="@+id/selectBinaryBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/SelectBinaryBtn"
+        android:textColor="@color/colorBtnText"
+        app:layout_constraintBottom_toTopOf="@+id/selectBase64Btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectMorseCodeBtn" />
+
+    <Button
+        android:id="@+id/selectBase64Btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/SelectBase64Btn"
+        android:textColor="@color/colorBtnText"
+        app:layout_constraintBottom_toTopOf="@+id/selectRomanNumeralsBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectBinaryBtn" />
+
+    <!-- Button
+        android:id="@+id/selectRot13Btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/SelectRot13Btn"
+        android:textColor="@color/colorBtnText"
+        app:layout_constraintBottom_toTopOf="@+id/selectRomanNumeralsBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectBase64Btn" / -->
 
     <Button
         android:id="@+id/selectRomanNumeralsBtn"
@@ -51,13 +102,15 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/selectMorseCodeBtn" />
+        app:layout_constraintTop_toBottomOf="@+id/selectBase64Btn" />
 
     <TextView
         android:id="@+id/createdByTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/created_by"
+        android:autoLink="web"
+        android:linksClickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"

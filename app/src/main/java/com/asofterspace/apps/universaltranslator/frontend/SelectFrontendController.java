@@ -47,6 +47,35 @@ public class SelectFrontendController {
             }
         });
 
+        Button selectBinaryBtn = (Button) parent.findViewById(R.id.selectBinaryBtn);
+        selectBinaryBtn.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                operationCtrl.switchTo(parent, Operation.BINARY);
+            }
+        });
+
+        Button selectBase64Btn = (Button) parent.findViewById(R.id.selectBase64Btn);
+        selectBase64Btn.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                operationCtrl.switchTo(parent, Operation.BASE64);
+            }
+        });
+
+        /*
+        Button selectRot13Btn = (Button) parent.findViewById(R.id.selectRot13Btn);
+        selectRot13Btn.setOnClickListener( new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                operationCtrl.switchTo(parent, Operation.ROT13);
+            }
+        });
+        */
+
         Button selectRomanNumeralsBtn = (Button) parent.findViewById(R.id.selectRomanNumeralsBtn);
         selectRomanNumeralsBtn.setOnClickListener( new View.OnClickListener() {
 

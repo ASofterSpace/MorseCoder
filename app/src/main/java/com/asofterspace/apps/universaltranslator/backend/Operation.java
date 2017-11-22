@@ -6,5 +6,5 @@ package com.asofterspace.apps.universaltranslator.backend;
  * @author Moya (a softer space, 2017)
  */
 public enum Operation {
-    MORSE_CODE, ROMAN_NUMERALS
+    MORSE_CODE, BINARY, BASE64, ROT13, ROMAN_NUMERALS
 }

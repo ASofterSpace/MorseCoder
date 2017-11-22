@@ -37,7 +37,7 @@ public class RomanNumeralEncoder {
 
         } catch (NumberFormatException e) {
 
-            return "";
+            return "N/A";
         }
     }
 
