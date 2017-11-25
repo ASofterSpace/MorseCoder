@@ -173,6 +173,78 @@ public class MorseDecoder {
                     case "----•":
                         result.append("9");
                         break;
+                    case "•-•-•-":
+                        result.append(".");
+                        break;
+                    case "--••--":
+                        result.append(",");
+                        break;
+                    case "••--••":
+                        result.append("?");
+                        break;
+                    case "•----•":
+                        result.append("'");
+                        break;
+                    case "-•-•--":
+                        result.append("!");
+                        break;
+                    case "-••-•":
+                        result.append("/");
+                        break;
+                    case "-•--•":
+                        result.append("(");
+                        break;
+                    case "-•--•-":
+                        result.append(")");
+                        break;
+                    case "•-•••":
+                        result.append("&");
+                        break;
+                    case "---•••":
+                        result.append(":");
+                        break;
+                    case "-•-•-•":
+                        result.append(";");
+                        break;
+                    case "-•••-":
+                        result.append("=");
+                        break;
+                    case "•-•-•":
+                        result.append("+");
+                        break;
+                    case "-••••-":
+                        result.append("-");
+                        break;
+                    case "••--•-":
+                        result.append("_");
+                        break;
+                    case "•-••-•":
+                        result.append("\"");
+                        break;
+                    case "•••-••-":
+                        result.append("$");
+                        break;
+                    case "•--•-•":
+                        result.append("@");
+                        break;
+                    case "•-•-":
+                        result.append("Ä");
+                        break;
+                    case "•--•-":
+                        result.append("Å");
+                        break;
+                    case "••--•":
+                        result.append("Ð");
+                        break;
+                    case "---•":
+                        result.append("Ö");
+                        break;
+                    case "•--••":
+                        result.append("Þ");
+                        break;
+                    case "••--":
+                        result.append("Ü");
+                        break;
                     default:
                         result.append("?");
                 }

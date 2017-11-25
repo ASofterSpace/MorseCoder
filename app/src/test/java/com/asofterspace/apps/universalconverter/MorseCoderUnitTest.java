@@ -33,5 +33,14 @@ public class MorseCoderUnitTest {
         String allDigitsUnmorse = (new MorseDecoder()).translateFromMorseCode(allDigitsMorse);
 
         assertEquals(allDigits, allDigitsUnmorse);
+
+
+        String allNonsense = ".,:;!?()_-+/\"ÄÖÜ";
+
+        String allNonsenseMorse = (new MorseEncoder()).translateToMorseCode(allNonsense);
+
+        String allNonsenseUnmorse = (new MorseDecoder()).translateFromMorseCode(allNonsenseMorse);
+
+        assertEquals(allNonsense, allNonsenseUnmorse);
     }
 }

@@ -142,6 +142,80 @@ public class MorseEncoder {
                 case '9':
                     result.append("----•");
                     break;
+                case '.':
+                    result.append("•-•-•-");
+                    break;
+                case ',':
+                    result.append("--••--");
+                    break;
+                case '?':
+                    result.append("••--••");
+                    break;
+                case '\'':
+                    result.append("•----•");
+                    break;
+                case '!':
+                    result.append("-•-•--");
+                    break;
+                case '/':
+                    result.append("-••-•");
+                    break;
+                case '(':
+                    result.append("-•--•");
+                    break;
+                case ')':
+                    result.append("-•--•-");
+                    break;
+                case '&':
+                    result.append("•-•••");
+                    break;
+                case ':':
+                    result.append("---•••");
+                    break;
+                case ';':
+                    result.append("-•-•-•");
+                    break;
+                case '=':
+                    result.append("-•••-");
+                    break;
+                case '+':
+                    result.append("•-•-•");
+                    break;
+                case '-':
+                    result.append("-••••-");
+                    break;
+                case '_':
+                    result.append("••--•-");
+                    break;
+                case '"':
+                    result.append("•-••-•");
+                    break;
+                case '$':
+                    result.append("•••-••-");
+                    break;
+                case '@':
+                    result.append("•--•-•");
+                    break;
+                case 'Ä':
+                case 'Æ':
+                    result.append("•-•-");
+                    break;
+                case 'Å':
+                    result.append("•--•-");
+                    break;
+                case 'Ð':
+                    result.append("••--•");
+                    break;
+                case 'Ö':
+                case 'Ø':
+                    result.append("---•");
+                    break;
+                case 'Þ':
+                    result.append("•--••");
+                    break;
+                case 'Ü':
+                    result.append("••--");
+                    break;
                 default:
                     result.append("?");
             }
