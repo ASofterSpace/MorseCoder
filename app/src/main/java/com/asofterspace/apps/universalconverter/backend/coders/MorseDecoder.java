@@ -8,6 +8,24 @@ package com.asofterspace.apps.universalconverter.backend.coders;
 public class MorseDecoder {
 
     /**
+     * Gets all the characters that are counted as "dot"
+     * @return An array of characters that are counted as "dot"
+     */
+    public char[] getWhatCountsAsDot() {
+
+        return ".·•*".toCharArray();
+    }
+
+    /**
+     * Gets all the characters that are counted as "dash"
+     * @return An array of characters that are counted as "dash"
+     */
+    public char[] getWhatCountsAsDash() {
+
+        return "_-–—".toCharArray();
+    }
+
+    /**
      * Translates a given text from its Morse code representation
      * @param morseToTranslate the text in Morse code that is to be translated
      * @return the text that the Morse code encoded
@@ -16,11 +34,13 @@ public class MorseDecoder {
 
         StringBuilder result = new StringBuilder();
 
-        morseToTranslate = morseToTranslate.replace('*', '•');
-        morseToTranslate = morseToTranslate.replace('.', '•');
-        morseToTranslate = morseToTranslate.replace('—', '-');
-        morseToTranslate = morseToTranslate.replace('–', '-');
-        morseToTranslate = morseToTranslate.replace('_', '-');
+        for (char c : getWhatCountsAsDot()) {
+            morseToTranslate = morseToTranslate.replace(c, '•');
+        }
+
+        for (char c : getWhatCountsAsDash()) {
+            morseToTranslate = morseToTranslate.replace(c, '-');
+        }
 
         // by default, we encode spaces between letters as three spaces,
         // so four spaces are enough to be sure that this is a space between words
