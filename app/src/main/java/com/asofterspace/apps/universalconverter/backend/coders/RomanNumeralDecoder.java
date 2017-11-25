@@ -29,9 +29,15 @@ public class RomanNumeralDecoder {
         int currentNumber;
         int carryNumber = 0;
 
+        // apparently, if a number is enclosed by pipes, we multiply it by 100... yay!
+        boolean hundredsOn = false;
+
         for (int i = 0; i < numerals.length(); i++) {
 
             switch (numerals.charAt(i)) {
+                case '|':
+                    hundredsOn = !hundredsOn;
+                    continue;
                 case 'I':
                     currentNumber = 1;
                     break;
@@ -55,6 +61,24 @@ public class RomanNumeralDecoder {
                     break;
                 default:
                     currentNumber = 0;
+            }
+
+            // if there is a stroke above the number, then multiply it by 1000
+            // (in addition to 100-multiplier)
+            if (i + 1 < numerals.length()) {
+                switch (numerals.charAt(i + 1)) {
+                    // different kinds of over-stroke-characters
+                    case '\u0305':
+                    case '\u0304':
+                    case '\u203E':
+                    case '\u00AF':
+                        currentNumber *= 1000;
+                        i += 1;
+                }
+            }
+
+            if (hundredsOn) {
+                currentNumber *= 100;
             }
 
             if (currentNumber == lastNumber) {

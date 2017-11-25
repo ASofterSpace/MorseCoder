@@ -58,8 +58,6 @@ public class MainFrontendController implements AdapterView.OnItemSelectedListene
 
         addListenerToTranslateButton();
 
-        addListenerToInputMemo();
-
         addListenerToExchangeButton();
 
         addLinkToCreatedByTxt();
@@ -305,20 +303,6 @@ public class MainFrontendController implements AdapterView.OnItemSelectedListene
             @Override
             public void onClick(View v) {
                 performTranslation();
-            }
-        });
-    }
-
-    private void addListenerToInputMemo() {
-
-        final EditText inputMemo = (EditText) parent.findViewById(R.id.inputMemo);
-        inputMemo.setOnClickListener( new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                if (inputMemo.getText().toString().equals(R.string.StartText)) {
-                    inputMemo.setText("");
-                }
             }
         });
     }

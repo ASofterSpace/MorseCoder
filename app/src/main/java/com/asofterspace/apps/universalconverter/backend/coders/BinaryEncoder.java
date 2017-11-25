@@ -1,5 +1,7 @@
 package com.asofterspace.apps.universalconverter.backend.coders;
 
+import java.math.BigInteger;
+
 /**
  * A class that can encode numbers into their binary representations
  *
@@ -29,7 +31,7 @@ public class BinaryEncoder {
 
         try {
 
-            int actualNumber = Integer.valueOf(number);
+            long actualNumber = Long.valueOf(number);
             return encodeIntoBinaryString(actualNumber, digits);
 
         } catch (NumberFormatException e) {
@@ -44,7 +46,7 @@ public class BinaryEncoder {
      * @param number  The number to be encoded in binary
      * @return A string representation of the number in binary
      */
-    public String encodeIntoBinaryString(int number) {
+    public String encodeIntoBinaryString(long number) {
         return encodeIntoBinaryString(number, null);
     }
 
@@ -56,16 +58,24 @@ public class BinaryEncoder {
      *                both have a special meaning (as the least possible amount will be used)
      * @return A string representation of the number in binary
      */
-    public String encodeIntoBinaryString(int number, Integer digits) {
+    public String encodeIntoBinaryString(long number, Integer digits) {
+
+        if (number < 0) {
+            return "Sorry, but representing numbers smaller than zero in binary is not uniquely " +
+                    "possible (very simply speaking, you can agree on an amount of digits that " +
+                    "a binary number should have and then append a 1 in the front to mean minus, " +
+                    "but in this app we do not specify any particular amount of digits.)";
+        }
 
         StringBuilder result = new StringBuilder();
 
-        int curly;
+        Long curly = 1L;
 
         if ((digits == null) || (digits == 0)) {
-            curly = 1073741824;
+            while (curly < number) {
+                curly *= 2;
+            }
         } else {
-            curly = 1;
             for (int i = 0; i < digits; i++) {
                 curly *= 2;
             }

@@ -57,4 +57,20 @@ public class RomanNumeralCoderUnitTest {
         // it here does not matter what actually comes out - but just that something comes
         // out instead of an exception being thrown ;)
     }
+
+    @Test
+    public void checkBigNumbers() throws Exception {
+
+        String numbers = "6120";
+        String encOutcome = (new RomanNumeralEncoder()).encodeNumbersIntoRomanNumerals(numbers);
+        assertEquals("V̅MCXX", encOutcome);
+
+        String decOutcome = (new RomanNumeralDecoder()).decodeRomanNumeralsIntoNumbers(encOutcome);
+        assertEquals(numbers, decOutcome);
+
+        numbers = "300120";
+        encOutcome = (new RomanNumeralEncoder()).encodeNumbersIntoRomanNumerals(numbers);
+        decOutcome = (new RomanNumeralDecoder()).decodeRomanNumeralsIntoNumbers(encOutcome);
+        assertEquals(numbers, decOutcome);
+    }
 }
