@@ -10,3 +10,6 @@
 
 *.apk
 app/release/output.json
+
+# external dependencies (with their own repositories and life cycles)
+app/src/main/java/com/asofterspace/toolbox

@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/UniversalConverter.iml" filepath="$PROJECT_DIR$/UniversalConverter.iml" />
+      <module fileurl="file://D:\prog\asofterspace\UniversalConverter\UniversalConverter.iml" filepath="D:\prog\asofterspace\UniversalConverter\UniversalConverter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:\prog\asofterspace\UniversalConverter\app\app.iml" filepath="D:\prog\asofterspace\UniversalConverter\app\app.iml" />
     </modules>
   </component>
 </project>

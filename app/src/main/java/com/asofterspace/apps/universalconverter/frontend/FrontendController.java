@@ -9,10 +9,10 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.asofterspace.apps.universalconverter.R;
-import com.asofterspace.apps.universalconverter.backend.coders.MorseDecoder;
-import com.asofterspace.apps.universalconverter.backend.coders.MorseEncoder;
-import com.asofterspace.apps.universalconverter.backend.coders.RomanNumeralDecoder;
-import com.asofterspace.apps.universalconverter.backend.coders.RomanNumeralEncoder;
+import com.asofterspace.toolbox.coders.MorseDecoder;
+import com.asofterspace.toolbox.coders.MorseEncoder;
+import com.asofterspace.toolbox.coders.RomanNumeralDecoder;
+import com.asofterspace.toolbox.coders.RomanNumeralEncoder;
 
 /**
  * This class controls the frontend of the UniversalTranslator
@@ -110,20 +110,20 @@ public class FrontendController implements AdapterView.OnItemSelectedListener {
         switch (selectedOperation) {
 
             case 0:
-                translatedText = (new MorseEncoder()).translateToMorseCode(textToTranslate);
+                translatedText = MorseEncoder.translateToMorseCode(textToTranslate);
                 break;
 
             case 1:
-                translatedText = (new MorseDecoder()).translateFromMorseCode(textToTranslate);
+                translatedText = MorseDecoder.translateFromMorseCode(textToTranslate);
                 break;
 
             case 2:
-                translatedText = (new RomanNumeralEncoder()).encodeNumbersIntoRomanNumerals(
+                translatedText = RomanNumeralEncoder.encodeNumbersIntoRomanNumerals(
                         textToTranslate);
                 break;
 
             case 3:
-                translatedText = (new RomanNumeralDecoder()).decodeRomanNumeralsIntoNumbers(
+                translatedText = RomanNumeralDecoder.decodeRomanNumeralsIntoNumbers(
                         textToTranslate);
                 break;
         }

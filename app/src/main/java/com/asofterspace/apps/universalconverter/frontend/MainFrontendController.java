@@ -17,14 +17,14 @@ import android.widget.TextView;
 import com.asofterspace.apps.universalconverter.R;
 import com.asofterspace.apps.universalconverter.backend.Operation;
 import com.asofterspace.apps.universalconverter.backend.OperationController;
-import com.asofterspace.apps.universalconverter.backend.coders.Base64Decoder;
-import com.asofterspace.apps.universalconverter.backend.coders.Base64Encoder;
-import com.asofterspace.apps.universalconverter.backend.coders.BinaryDecoder;
-import com.asofterspace.apps.universalconverter.backend.coders.BinaryEncoder;
-import com.asofterspace.apps.universalconverter.backend.coders.MorseDecoder;
-import com.asofterspace.apps.universalconverter.backend.coders.MorseEncoder;
-import com.asofterspace.apps.universalconverter.backend.coders.RomanNumeralDecoder;
-import com.asofterspace.apps.universalconverter.backend.coders.RomanNumeralEncoder;
+import com.asofterspace.toolbox.coders.Base64Decoder;
+import com.asofterspace.toolbox.coders.Base64Encoder;
+import com.asofterspace.toolbox.coders.BinaryDecoder;
+import com.asofterspace.toolbox.coders.BinaryEncoder;
+import com.asofterspace.toolbox.coders.MorseDecoder;
+import com.asofterspace.toolbox.coders.MorseEncoder;
+import com.asofterspace.toolbox.coders.RomanNumeralDecoder;
+import com.asofterspace.toolbox.coders.RomanNumeralEncoder;
 
 /**
  * This class controls the frontend of the UniversalTranslator's main activity
@@ -330,34 +330,34 @@ public class MainFrontendController implements AdapterView.OnItemSelectedListene
 
             case MORSE_CODE:
                 if (selectedOperation == 0) {
-                    translatedText = (new MorseEncoder()).translateToMorseCode(textToTranslate);
+                    translatedText = MorseEncoder.translateToMorseCode(textToTranslate);
                 } else {
-                    translatedText = (new MorseDecoder()).translateFromMorseCode(textToTranslate);
+                    translatedText = MorseDecoder.translateFromMorseCode(textToTranslate);
                 }
                 break;
 
             case BINARY:
                 if (selectedOperation == 0) {
-                    translatedText = (new BinaryEncoder()).encodeIntoBinaryString(textToTranslate);
+                    translatedText = BinaryEncoder.encodeIntoBinaryString(textToTranslate);
                 } else {
-                    translatedText = (new BinaryDecoder()).decodeFromBinaryIntoStr(textToTranslate);
+                    translatedText = BinaryDecoder.decodeFromBinaryIntoStr(textToTranslate);
                 }
                 break;
 
             case BASE64:
                 if (selectedOperation == 0) {
-                    translatedText = (new Base64Encoder()).encodeIntoBase64(textToTranslate);
+                    translatedText = Base64Encoder.encodeIntoBase64(textToTranslate);
                 } else {
-                    translatedText = (new Base64Decoder()).decodeFromBase64(textToTranslate);
+                    translatedText = Base64Decoder.decodeFromBase64(textToTranslate);
                 }
                 break;
 
             case ROMAN_NUMERALS:
                 if (selectedOperation == 0) {
-                    translatedText = (new RomanNumeralEncoder()).encodeNumbersIntoRomanNumerals(
+                    translatedText = RomanNumeralEncoder.encodeNumbersIntoRomanNumerals(
                             textToTranslate);
                 } else {
-                    translatedText = (new RomanNumeralDecoder()).decodeRomanNumeralsIntoNumbers(
+                    translatedText = RomanNumeralDecoder.decodeRomanNumeralsIntoNumbers(
                             textToTranslate);
                 }
                 break;
